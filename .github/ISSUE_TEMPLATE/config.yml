@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support Sorify on Ko-fi
+    url: https://ko-fi.com/anthonyfararoni
+    about: Sorify is free. A coffee keeps the updates coming.
+  - name: Download the latest version
+    url: https://github.com/AnthonyFararoni/Sorify/releases/latest
+    about: Many problems are fixed in newer releases; check before reporting.

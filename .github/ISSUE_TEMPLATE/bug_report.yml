@@ -1,0 +1,54 @@
+name: Bug report
+description: Something does not work as described
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The log files make most problems easy to find: **About → Open log folder** in Sorify, or `%LocalAppData%\Sorify\logs`.
+  - type: input
+    id: version
+    attributes:
+      label: Sorify version
+      description: Shown in About.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Engine
+      description: What the chip at the top right of the window says.
+      options:
+        - NVIDIA GPU (CUDA)
+        - CPU mode
+        - Engine failed to load
+        - Setup did not finish
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and GPU
+      placeholder: "Windows 11 24H2, RTX 3060 12 GB, driver 621.01"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what you got. Error text from the Log tab helps.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Add file.mp4
+        2. Model turbo, format SRT
+        3. Press Start
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log excerpt
+      description: Paste the relevant lines of `sorify.log` or `setup.log` (they contain no audio or transcript text, only file names).
+      render: text
